@@ -29,6 +29,7 @@ RUN \
   mv /gallery3-contrib/3.0/modules/* /gallery3/modules/ && rm -rf /gallery3-contrib
 
 RUN git clone https://github.com/mstoltenburg/html5_upload_progress.git && mv html5_upload_progress /gallery3/modules/
+RUN git clone https://github.com/mrJakez/gallery3-extended_rest.git && mv gallery3-extended_rest /gallery3/modules/
 
 #RUN \
 #  git clone https://github.com/avolf/gallery-html5video.git && \
