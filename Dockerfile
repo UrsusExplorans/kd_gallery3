@@ -48,7 +48,8 @@ ADD php.ini /etc/php5/apache2/php.ini
 
 RUN chown -R www-data:www-data /var/www/*
 
-VOLUME ["/var/www/var"]
+VOLUME "/var/www/var"
+VOLUME "/var/www"
 
 ADD entrypoint.sh /entrypoint.sh
 
