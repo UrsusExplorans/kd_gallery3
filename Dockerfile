@@ -37,7 +37,6 @@ RUN git clone https://github.com/mrJakez/gallery3-extended_rest.git && mv galler
 
 RUN rm -rf /var/www/*
 RUN cp -r /gallery3/. /var/www/ 
-RUN ls /gallery3
 RUN rm -rf /gallery3 
 
 RUN a2enmod rewrite
@@ -49,8 +48,6 @@ ADD php.ini /etc/php5/apache2/php.ini
 
 RUN chown -R www-data:www-data /var/www/*
 
-#VOLUME "/var/www/var"
-#VOLUME "/var/www"
 VOLUME ["/var/www/var"]
 
 ADD entrypoint.sh /entrypoint.sh
