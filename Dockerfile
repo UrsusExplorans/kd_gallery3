@@ -21,7 +21,7 @@ RUN \
    apt-get clean autoclean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
 RUN \
-  git clone git://github.com/gallery/gallery3.git && \ 
+  git clone https://github.com/gallery/gallery3.git && \ 
   cd /gallery3 && git checkout 3.0.9 && rm -rf .git 
 
 RUN \
@@ -37,6 +37,7 @@ RUN git clone https://github.com/mrJakez/gallery3-extended_rest.git && mv galler
 
 RUN rm -rf /var/www/*
 RUN cp -r /gallery3/. /var/www/ 
+RUN ls /gallery3
 RUN rm -rf /gallery3 
 
 RUN a2enmod rewrite
